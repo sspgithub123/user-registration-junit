@@ -121,4 +121,25 @@ public class UserRegTest {
         boolean isPasswordInValid = userRegistration.checkPassword("abcd");
         Assert.assertFalse(isPasswordInValid);
     }
+    @Test
+    /**
+     * created method mood_Analyser_Test_Happy() as Happy Test Case validates the
+     * Entry Successfully
+     */
+    public void mood_Analyser_Test_Happy() {
+        UserRegistration userRegistration = new UserRegistration();
+        String isMoodHappy = userRegistration.moodAnalyzer("Almas", "Advani", "91 7903900074", "almas007.sm@gmail.com",
+                "Almas@2103");
+        Assert.assertEquals("HAPPY", isMoodHappy);
+    }
+
+    @Test
+    /**
+     * created method mood_Analyser_Test_Sad() as Sad Test Cases fails the Entry
+     */
+    public void mood_Analyser_Test_Sad() {
+        UserRegistration userRegistration = new UserRegistration();
+        String isMoodSad = userRegistration.moodAnalyzer("almas", "advani", "7903900074", "almas007@.com", "799235");
+        Assert.assertEquals("SAD", isMoodSad);
+    }
 }
