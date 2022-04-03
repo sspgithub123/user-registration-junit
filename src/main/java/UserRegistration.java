@@ -18,7 +18,7 @@ public class UserRegistration {
      * @param fName -FirstName of the String
      * @return -return to method created
      */
-    public boolean checkFName(String fName) {
+    public boolean checkFirstName(String fName) {
         /**
          * regex pattern for FirstName
          */
@@ -33,7 +33,7 @@ public class UserRegistration {
      * @param Lname -LastName of the String
      * @return - return to method created
      */
-    public boolean Lname(String Lname) {
+    public boolean lastName(String Lname) {
         return (Lname.matches("[A-Z][a-z]{3,}"));
     }
 
@@ -57,7 +57,7 @@ public class UserRegistration {
      * @param phoneNum -passing phoneNumber
      * @return -return to method created
      */
-    public boolean checkPhoneNum(String phoneNum) {
+    public boolean checkPhoneNumber(String phoneNum) {
         return (phoneNum.matches("91\\s[0-9]{10}"));
     }
 
@@ -85,8 +85,8 @@ public class UserRegistration {
      */
 
     public String moodAnalyzer(String fName, String Lname, String phoneNum, String emailID, String password) {
-        if (checkFName(fName) == true && Lname(Lname) == true && checkEmail(emailID) == true
-                && checkPhoneNum(phoneNum) == true && checkPassword(password) == true) {
+        if (checkFirstName(fName) == true && lastName(Lname) == true && checkEmail(emailID) == true
+                && checkPhoneNumber(phoneNum) == true && checkPassword(password) == true) {
             return "HAPPY";
         } else {
             return "SAD";
