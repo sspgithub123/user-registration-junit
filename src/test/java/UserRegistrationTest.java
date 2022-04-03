@@ -5,7 +5,7 @@ import org.junit.Test;
  * testCases for validating lastName
  */
 
-public class UserRegTest {
+public class UserRegistrationTest {
     @Test
     /**
      * created method testingFirstName() to check firstname is valid or not
@@ -18,8 +18,8 @@ public class UserRegTest {
         /**
          * calling checkFName method to see firstname is valid
          */
-        boolean isFNameValid = userRegistration.checkFName("Almas");
-        Assert.assertTrue(isFNameValid);
+        boolean isFirstNameValid = userRegistration.checkFirstName("Shubham");
+        Assert.assertTrue(isFirstNameValid);
     }
 
     @Test
@@ -28,8 +28,8 @@ public class UserRegTest {
      */
     public void testFirstNameInvalidMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isFnameValid = userRegistration.checkFName("almas");
-        Assert.assertFalse(isFnameValid);
+        boolean isFirstnameValid = userRegistration.checkFirstName("shubham");
+        Assert.assertFalse(isFirstnameValid);
     }
 
     /**
@@ -41,8 +41,8 @@ public class UserRegTest {
         /**
          * calling Lname method to see LastName is valid
          */
-        boolean isLnameValid = userRegistration.Lname("Advani");
-        Assert.assertTrue(isLnameValid);
+        boolean isLastNameValid = userRegistration.lastName("Pawar");
+        Assert.assertTrue(isLastNameValid);
     }
 
     /**
@@ -51,19 +51,19 @@ public class UserRegTest {
     @Test
     public void testLastNameValidMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isLnameINValid = userRegistration.Lname("advani");
-        Assert.assertFalse(isLnameINValid);
+        boolean isLastNameINValid = userRegistration.lastName("jadhav");
+        Assert.assertFalse(isLastNameINValid);
     }
     @Test
     /**
      * created method testEmailId_MustReturnTrue() for true condition
      */
-    public void testEmailId_MustReturnTrue() {
+    public void testEmailIdMustReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         /**
          * calling checkEmail method to see mailId is valid
          */
-        boolean isEmailValid = userRegistration.checkEmail("almas.ab@gmail.com");
+        boolean isEmailValid = userRegistration.checkEmail("pawar.ab@gmail.com");
         Assert.assertTrue(isEmailValid);
     }
 
@@ -72,21 +72,21 @@ public class UserRegTest {
      * created method testEmailId_MustReturnFalse() for false condition
      */
 
-    public void testEmailId_MustReturnFalse() {
+    public void testEmailIdMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isEmailInvalid = userRegistration.checkEmail("almas@.com");
+        boolean isEmailInvalid = userRegistration.checkEmail("pawar@.com");
         Assert.assertFalse(isEmailInvalid);
     }
     @Test
     /**
      * created testPhoneNumber_MustReturnTrue() for True condition
      */
-    public void testPhoneNumber_MustReturnTrue() {
+    public void testPhoneNumberMustReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         /**
          * calling checkPhoneNum method to see phoneNumber is valid
          */
-        boolean isPhoneNumberValid = userRegistration.checkPhoneNum("91 7903990740");
+        boolean isPhoneNumberValid = userRegistration.checkPhoneNumber("91 7903990740");
         Assert.assertTrue(isPhoneNumberValid);
     }
 
@@ -94,16 +94,16 @@ public class UserRegTest {
     /**
      * created testPhoneNumber_MustReturnFalse() for False condition
      */
-    public void testPhoneNumber_MustReturnFalse() {
+    public void testPhoneNumberMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean isPhoneNumberInValid = userRegistration.checkPhoneNum("7903990740");
+        boolean isPhoneNumberInValid = userRegistration.checkPhoneNumber("7903990740");
         Assert.assertFalse(isPhoneNumberInValid);
     }
     @Test
     /**
      * created testPassword_MustReturnTrue() for True condition
      */
-    public void testPassword_MustReturnTrue() {
+    public void testPasswordMustReturnTrue() {
         UserRegistration userRegistration = new UserRegistration();
         /**
          * calling checkPassword method to see Password is valid
@@ -116,7 +116,7 @@ public class UserRegTest {
     /**
      * created testPassword_MustReturnFalse() for False condition
      */
-    public void testPassword_MustReturnFalse() {
+    public void testPasswordMustReturnFalse() {
         UserRegistration userRegistration = new UserRegistration();
         boolean isPasswordInValid = userRegistration.checkPassword("abcd");
         Assert.assertFalse(isPasswordInValid);
@@ -126,10 +126,11 @@ public class UserRegTest {
      * created method mood_Analyser_Test_Happy() as Happy Test Case validates the
      * Entry Successfully
      */
-    public void mood_Analyser_Test_Happy() {
+    public void moodAnalyserTestHappy() {
         UserRegistration userRegistration = new UserRegistration();
-        String isMoodHappy = userRegistration.moodAnalyzer("Almas", "Advani", "91 7903900074", "almas007.sm@gmail.com",
-                "Almas@2103");
+        String isMoodHappy = userRegistration.moodAnalyzer("Shubham", "Pawar", "91 7903900074",
+                "pawar007.sm@gmail.com",
+                "Shubham@2103");
         Assert.assertEquals("HAPPY", isMoodHappy);
     }
 
@@ -137,9 +138,10 @@ public class UserRegTest {
     /**
      * created method mood_Analyser_Test_Sad() as Sad Test Cases fails the Entry
      */
-    public void mood_Analyser_Test_Sad() {
+    public void moodAnalyserTestSad() {
         UserRegistration userRegistration = new UserRegistration();
-        String isMoodSad = userRegistration.moodAnalyzer("almas", "advani", "7903900074", "almas007@.com", "799235");
+        String isMoodSad = userRegistration.moodAnalyzer("Shubham", "pawar", "7903900074",
+                "pawar007@.com", "799235");
         Assert.assertEquals("SAD", isMoodSad);
     }
 }
