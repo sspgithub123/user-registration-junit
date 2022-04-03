@@ -72,6 +72,7 @@ public class UserRegistration {
     public boolean checkPassword(String password) {
         return (password.matches("[a-zA-Z]{8,}"));
     }
+
     /**
      * creating method moodAnalyzer to check the mood happy or sad
      *
