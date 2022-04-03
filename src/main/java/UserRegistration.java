@@ -36,6 +36,7 @@ public class UserRegistration {
     public boolean Lname(String Lname) {
         return (Lname.matches("[A-Z][a-z]{3,}"));
     }
+
     /**
      * created method checkEmail and passing parameter in this it will check Email
      * is valid or not result will be in true or false because method is boolean
