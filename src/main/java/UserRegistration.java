@@ -8,6 +8,7 @@
 /**
  * created class name as UserRegistration
  */
+
 public class UserRegistration {
     /**
      * created method checkFName and passing parameter in this it will check
