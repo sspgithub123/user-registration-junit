@@ -56,4 +56,15 @@ public class UserRegistration {
     public boolean checkPhoneNum(String phoneNum) {
         return (phoneNum.matches("91\\s[0-9]{10}"));
     }
+    /**
+     * created method checkPassword and passing parameter in this it will check
+     * Password is valid or not result will be in true or false because method is
+     * boolean type
+     *
+     * @param password- passing password
+     * @return -return to method created
+     */
+    public boolean checkPassword(String password) {
+        return (password.matches("[a-zA-Z]{8,}"));
+    }
 }
